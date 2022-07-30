@@ -62,6 +62,7 @@ if (pwd!=confirm_pwd) {
   var same=document.getElementById("check_same");
       document.getElementById('b5').style.color="red"; 
         same.style.display = "block" ;
+        same.focus();
          document.getElementById("pwd_2").style.border="4px solid red";
          document.getElementById("pwd_2").value='';
        
@@ -71,6 +72,7 @@ if (pwd!=confirm_pwd) {
   var n=document.getElementById("check_uname");
    document.getElementById('b1').style.color="red"; 
         n.style.display = "block" ;
+         n.focus();
          document.getElementById("name").style.border="4px solid red";
           document.getElementById("name").value='';
       setTimeout(()=>{n.style.display = "none";document.getElementById("name").style.border="2px solid  #2F96EF"; document.getElementById('b1').style.color="blue";document.getElementById("name").focus()},2500);
@@ -79,6 +81,7 @@ if (pwd!=confirm_pwd) {
   var mail=document.getElementById("check_mailid");
       document.getElementById('b2').style.color="red"; 
         mail.style.display = "block" ;
+        mail.focus();
          document.getElementById("mail").style.border="4px solid red";
           document.getElementById("mail").value='';
       setTimeout(()=>{mail.style.display = "none" ;document.getElementById("mail").style.border="2px solid  #2F96EF"; document.getElementById('b2').style.color="blue";document.getElementById("mail").focus()},1500);
@@ -87,6 +90,7 @@ if (pwd!=confirm_pwd) {
   var ph=document.getElementById("check_mno");
       document.getElementById('b3').style.color="red"; 
         ph.style.display = "block" ;
+        ph.focus();
          document.getElementById("phno").style.border="4px solid red";
           document.getElementById("phno").value='';
       setTimeout(()=>{ph.style.display = "none" ;document.getElementById("phno").style.border="2px solid  #2F96EF"; document.getElementById('b3').style.color="blue";document.getElementById("phno").focus()},1500);
@@ -95,6 +99,7 @@ if (pwd!=confirm_pwd) {
   var p=document.getElementById("check_pwd");
       document.getElementById('b4').style.color="red"; 
         p.style.display = "block" ;
+         p.focus();
          document.getElementById("pwd").style.border="4px solid red";
         document.getElementById("pwd").value='';
       setTimeout(()=>{p.style.display = "none" ;document.getElementById("pwd").style.border="2px solid  #2F96EF"; document.getElementById('b4').style.color="blue";document.getElementById("pwd").focus()},1500);
@@ -103,6 +108,7 @@ if (pwd!=confirm_pwd) {
   var p=document.getElementById("check_pwdlen");
       document.getElementById('b4').style.color="red"; 
         p.style.display = "block" ;
+        p.focus();
          document.getElementById("pwd").style.border="4px solid red";
          document.getElementById("pwd").value='';
       setTimeout(()=>{p.style.display = "none" ;document.getElementById("pwd").style.border="2px solid  #2F96EF"; document.getElementById('b4').style.color="blue";document.getElementById("pwd").focus()},1500);
@@ -112,6 +118,7 @@ else{
 
 
  document.getElementById("success").style.display="block";
+ document.getElementById("success").focus();
  setTimeout(()=>{document.getElementById("success").style.display="none"; document.getElementById("form").reset();},5000);
 
  console.log(name,pwd,phno,pwd)
