@@ -63,7 +63,7 @@ if (pwd!=confirm_pwd) {
       document.getElementById('b5').style.color="red"; 
         same.style.display = "block" ;
          document.getElementById("pwd_2").style.border="4px solid red";
-         pwd='';
+         document.getElementById("pwd_2").value='';
        
       setTimeout(()=>{same.style.display = "none" ;document.getElementById("pwd_2").style.border="2px solid  #2F96EF"; document.getElementById('b5').style.color="blue";document.getElementById("pwd_2").focus()},2500);
    
@@ -72,7 +72,7 @@ if (pwd!=confirm_pwd) {
    document.getElementById('b1').style.color="red"; 
         n.style.display = "block" ;
          document.getElementById("name").style.border="4px solid red";
-          name='';
+          document.getElementById("name").value='';
       setTimeout(()=>{n.style.display = "none";document.getElementById("name").style.border="2px solid  #2F96EF"; document.getElementById('b1').style.color="blue";document.getElementById("name").focus()},2500);
   
 }else if(mailid==="" || mail_check==false){
@@ -80,7 +80,7 @@ if (pwd!=confirm_pwd) {
       document.getElementById('b2').style.color="red"; 
         mail.style.display = "block" ;
          document.getElementById("mail").style.border="4px solid red";
-          mailid='';
+          document.getElementById("mail").value='';
       setTimeout(()=>{mail.style.display = "none" ;document.getElementById("mail").style.border="2px solid  #2F96EF"; document.getElementById('b2').style.color="blue";document.getElementById("mail").focus()},1500);
 
 }else if(phno==""|| phno.length<10||phno.length>10||isNaN(phno)){
@@ -88,7 +88,7 @@ if (pwd!=confirm_pwd) {
       document.getElementById('b3').style.color="red"; 
         ph.style.display = "block" ;
          document.getElementById("phno").style.border="4px solid red";
-          phno='';
+          document.getElementById("phno").value='';
       setTimeout(()=>{ph.style.display = "none" ;document.getElementById("phno").style.border="2px solid  #2F96EF"; document.getElementById('b3').style.color="blue";document.getElementById("phno").focus()},1500);
 
 }else if(pwd===""){
@@ -96,7 +96,7 @@ if (pwd!=confirm_pwd) {
       document.getElementById('b4').style.color="red"; 
         p.style.display = "block" ;
          document.getElementById("pwd").style.border="4px solid red";
-        pwd='';
+        document.getElementById("pwd").value='';
       setTimeout(()=>{p.style.display = "none" ;document.getElementById("pwd").style.border="2px solid  #2F96EF"; document.getElementById('b4').style.color="blue";document.getElementById("pwd").focus()},1500);
 
 }else if(pwd.length<6){
@@ -104,7 +104,7 @@ if (pwd!=confirm_pwd) {
       document.getElementById('b4').style.color="red"; 
         p.style.display = "block" ;
          document.getElementById("pwd").style.border="4px solid red";
-         pwd='';
+         document.getElementById("pwd").value='';
       setTimeout(()=>{p.style.display = "none" ;document.getElementById("pwd").style.border="2px solid  #2F96EF"; document.getElementById('b4').style.color="blue";document.getElementById("pwd").focus()},1500);
 }
 
@@ -112,14 +112,11 @@ else{
 
 
  document.getElementById("success").style.display="block";
- setTimeout(()=>{document.getElementById("success").style.display="none";},5000);
+ setTimeout(()=>{document.getElementById("success").style.display="none"; document.getElementById("form").reset();},5000);
 
-console.log(name,pwd,phno,pwd)
- 
+ console.log(name,pwd,phno,pwd)
+  save(name,mailid,phno,pwd);
 
-
- save(name,mailid,phno,pwd);
- document.getElementById("form").reset();
 
 
  
