@@ -125,32 +125,3 @@ console.log(name,pwd,phno,pwd)
  
 }
 }
-//   if (uName.value == null|| uName.value == "" ||uName.value == isNaN) {
-//    document.getElementById('b1').style.color="red"; 
-//         error_name.style.display = "block" ;
-//          uName.style.border="4px solid red";
-       
-//       setTimeout(()=>{error_name.style.display="none";uName.style.border="2px solid  #2F96EF"; document.getElementById('b1').style.color="blue";uName.focus()},2000);
-  
-//     return false;
-// }
-// else if (pass_word.value == null|| pass_word.value == "") {
-//     document.getElementById('b2').style.color="red";  
-//         error_pwd.style.display = "block" ;
-//          pass_word.style.border="4px solid red";
-       
-//       setTimeout(()=>{error_pwd.style.display="none";pass_word.style.border="2px solid  #2F96EF"; document.getElementById('b2').style.color="blue";pass_word.focus()},2000);
-  
-//     return false;
-
-// }
-// else if (pass_word.value.length<6){
-//    document.getElementById('b2').style.color="red";
-//       error_pwdlen.style.display = "block" ;
-//        pass_word.style.border="4px solid red";
-       
-//       setTimeout(()=>{error_pwdlen.style.display="none";pass_word.style.border="2px solid  #2F96EF"; document.getElementById('b2').style.color="blue";pass_word.focus()},2000);
-  
-//     return false;
-// }
-// }
