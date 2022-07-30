@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>login page</title>
+	<style type="text/css">
+		.opt{
+    text-align:center;
+}
+		
+		 body{
+       
+			-webkit-print-color-adjust: exact !important;
+			background: linear-gradient(to right,#81d6d3,#1b30cf)!important;
+			align-items: center;
+			justify-content: center;
+			display: flex;
+                       /* min-width:960px;*/
+                         
+       
+		}
+
+         .container{
+			position: relative;
+			/*margin: 350px 270px 100px;*/
+			width: 550px;
+			height: 1000px;
+                     background: linear-gradient(to left,#cf691b,#ed68eb);
+			border-radius: 20px;
+			display:block;
+			box-shadow: 0 0 45px 20px midnightblue;
+                       
+		}
+         
+		.login_form{
+
+			padding: 60px 60px;
+		}
+		label{
+			font-size: 20px;
+			/*margin: 5px 0;*/
+			color:blue;
+                     box-shadow: 0 0 30px 2px gray;
+			font-weight: bold;
+			font-family: verdana;
+			border-radius: 6px;
+			text-align: left;
+
+		}
+		.login_form input{
+			height: 50px;
+			width: 350px;
+			padding: 0 5px;
+			font-size: 18px;
+			outline: none;
+			border: 2px solid  #2F96EF;
+			/*text-align: left;*/
+			border-radius: 10px;
+		}
+		.login_form input:focus{
+			/*border: 4px solid #2F96EF;*/
+			box-shadow: 0 0 5px 5px seagreen;
+		}
+		
+		#submitbtn{
+				box-shadow: 0 0 5px 5px #2e6a6b;
+				margin: 45px 0 30px 0;
+				height: 60px;
+				width: 200px;
+				font-size: 30px;
+				color: black;
+				outline: none;
+				font-weight: bold;
+				cursor: pointer;
+				/*padding: 10px 5px 20px 5px;*/
+				font-family:arial,sans-serif;
+				background: linear-gradient(to left,gray,seagreen,yellow,midnightblue);
+				border-radius: 25px;
+				border: 2px solid black;
+		}
+		#submitbtn:hover{
+			color: #253030;
+			
+		}
+     
+        #check_uname,#check_mailid,#check_same,#check_pwd,#check_pwdlen,#check_mno{
+       	/*margin-top: 0;*/
+       	box-shadow: 0 0 5px 5px #EF9A9A;
+       	width: auto;
+       	font-size: 20px;
+       	color: white ;
+       	background: red ;
+       	text-align: center;
+       	padding: 10px;
+       	border-radius: 37px;
+       	border: 1px solid whitesmoke;
+       	display: none;
+       	font-weight: bolder;
+       }
+ 
+#success{
+       	display: none;
+       	box-shadow: 0 0 2px 2px #37eb23;
+       	margin-top: 5px;
+       	width: auto;
+       	font-size: 18px;
+       	color: white;
+       	font-weight: bold;
+       	padding: 10px 8px;
+       	background: #29f013;
+       	text-align: center;
+       	border-radius: 10px;
+       	border: 2px solid #1e7d14;
+       }
+#showpwd{
+		height:25px;
+		width :85px;
+		text-align: center;
+		font-size:10px;
+		outline: none;
+		box-shadow: none;
+		font-weight: normal;
+		cursor: pointer;
+}
+#showpwd:hover{
+	color: green;
+}
+::placeholder{
+	font-size: 15pt;
+	color: skyblue;
+	font-family: sans-serif;
+	font-weight: bold;
+
+
+}
+
+sup{
+	color: red;
+	font-weight: bolder;
+	font-size: 20px;
+}		
+#let_join{
+	
+    background: linear-gradient(to left,#328787,#1bf7f7,#7038f2,#e038f2); 
+             font-weight: bolder;
+             font-family: arial,sans-serif;
+            -webkit-background-clip: text; 
+
+            color: transparent;
+}	
+#pic{
+	font-size: 150px;
+	background: linear-gradient(to left,violet,blue,indigo,midnightblue,black); 
+
+            -webkit-background-clip: text; 
+
+            color: transparent;
+}	
+		
+	</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="text-align: center;">
+      
+	<div class="container">
+       <i class="fa fa-reddit-alien" id="pic"></i>
+	<h1 id="let_join">LET's JOIN</h1>	   
+	<form class="login_form" id="form"  autocomplete="on">
+       <div id="success">SignUp Successfully <i class="glyphicon glyphicon-thumbs-up"></i></div>
+       <div id="check_pwd">Please Enter a Valid Password<i class="fa fa-exclamation" style="font-size:24px"></i></div>
+	<div id="check_pwdlen">Password Must be 6 characters or Above<i class="fa fa-exclamation" style="font-size:24px"></i></div>
+	<div id="check_uname">Please Enter a valid Name <i class="fa fa-exclamation" style="font-size:24px"></i></div>
+	<div id="check_same">Your Entered Password is Not Same <i class="fa fa-exclamation" style="font-size:24px"></i></div>
+       <div id="check_mno">Please Enter a valid Mobile.no <i class="fa fa-exclamation" style="font-size:24px"></i></div>
+       <div id="check_mailid">Enter a Valid Email <i class="fa fa-exclamation" style="font-size:24px"></i> 'Example123@gmail.com'</div>
+       <br>
+       <hr>
+       <br>
+	
+	<label id="b1" ><i class="glyphicon glyphicon-user"></i> NAME:<sup>*</sup>       </label><br><input type="text" name="name" id="name" placeholder="Enter your Name"  autofocus required> 
+	<br>
+	<br>
+	<label id="b2"><i class="glyphicon glyphicon-envelope"></i> E-mail:<sup>*</sup>      </label><br><input type="email" name="password" id="mail"  placeholder="Example@gmail.com" required>
+	<br>
+	<br>
+	<label id="b3"><i class="fa fa-mobile-phone"></i> Mobile NO:<sup>*</sup>       </label><br><input type="text" name="ph_no" id="phno" placeholder="xxxxxxxxxx"  maxlength="10" minlength="10" required>
+	<br>
+	<br>
+	<label id="b4"><i class="fa fa-lock"></i> PASSWORD:<sup>*</sup>        </label><br><input type="password" name="password" id="pwd" placeholder="*********" required>
+	<br>
+	<br>
+	<label id="b5"><i class="fa fa-lock"></i>CONFIRM PASSWORD:<sup>*</sup></label><br><input type="password" name="password" id="pwd_2" placeholder="**********" required>
+	<br>
+	<br>
+	<i class="fa fa-eye" style="font-size:20px"></i><input type="button" onclick="showpassword();" id="showpwd" value="Show password" >
+	<br>
+	<br>
+	<br><br>
+	<button onclick="validate()" name="submit" id="submitbtn">Sign Up</button>
+</form>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+<script type="text/javascript" src="firebase.js"></script>
+</body>
+</html>
