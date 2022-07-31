@@ -5,32 +5,36 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>login page</title>
 	<style type="text/css">
+		.opt{
+    text-align:center;
+}
 		
 		 body{
        
 			-webkit-print-color-adjust: exact !important;
-			background:linear-gradient(to left,#cf691b,#ed68eb);
- /*linear-gradient(to right,#81d6d3,#1b30cf)!important;*/
+			background: linear-gradient(to right,#81d6d3,#1b30cf)!important;
 			align-items: center;
 			justify-content: center;
 			/*display: flex;*/
                        /* min-width:960px;*/
+                     
+                      
                          
        
 		}
 
-  /*   .container{
+
+	/* .container{
 			position: relative;
 			margin: 350px 270px 100px;
 			width: 550px;
 			height: 1000px;
-                     background: linear-gradient(to left,#cf691b,#ed68eb);
+	              background: linear-gradient(to left,#cf691b,#ed68eb);
 			border-radius: 20px;
 			display:block;
 			box-shadow: 0 0 45px 20px midnightblue;
-                       
-		}
-*/
+	                
+		}*/
          
 		.login_form{
 
@@ -48,13 +52,13 @@
 
 		}
 		.login_form input{
-			height: 50px;
-			width: 350px;
+			height: 40px;
+			width: 250px;
 			padding: 0 5px;
-			font-size: 18px;
+			font-size: 15px;
 			outline: none;
 			border: 2px solid  #2F96EF;
-			/*text-align: left;*/
+			text-align: left;
 			border-radius: 10px;
 		}
 		.login_form input:focus{
@@ -103,7 +107,7 @@
        	box-shadow: 0 0 2px 2px #37eb23;
        	margin-top: 5px;
        	width: auto;
-       	font-size: 18px;
+       	font-size: 20px;
        	color: white;
        	font-weight: bold;
        	padding: 10px 8px;
@@ -126,7 +130,7 @@
 	color: green;
 }
 ::placeholder{
-	font-size: 15pt;
+	font-size: 13pt;
 	color: skyblue;
 	font-family: sans-serif;
 	font-weight: bold;
@@ -149,7 +153,7 @@ sup{
             color: transparent;
 }	
 #pic{
-	font-size: 150px;
+	font-size: 100px;
 	background: linear-gradient(to left,violet,blue,indigo,midnightblue,black); 
 
             -webkit-background-clip: text; 
@@ -162,9 +166,8 @@ sup{
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body style="text-align: center;">
-    <center>  
-	
-
+      
+	<div class="container">
        <i class="fa fa-reddit-alien" id="pic"></i>
 	<h1 id="let_join">LET's JOIN</h1>	   
 	<form class="login_form" id="form"  autocomplete="on">
@@ -181,27 +184,20 @@ sup{
 	
 	<label id="b1" ><i class="glyphicon glyphicon-user"></i> NAME:<sup>*</sup>       </label><br><input type="text" name="name" id="name" placeholder="Enter your Name"  autofocus required> 
 	<br>
-	<br>
 	<label id="b2"><i class="glyphicon glyphicon-envelope"></i> E-mail:<sup>*</sup>      </label><br><input type="email" name="password" id="mail"  placeholder="Example@gmail.com" required>
-	<br>
 	<br>
 	<label id="b3"><i class="fa fa-mobile-phone"></i> Mobile NO:<sup>*</sup>       </label><br><input type="text" name="ph_no" id="phno" placeholder="xxxxxxxxxx"  maxlength="10" minlength="10" required>
 	<br>
-	<br>
 	<label id="b4"><i class="fa fa-lock"></i> PASSWORD:<sup>*</sup>        </label><br><input type="password" name="password" id="pwd" placeholder="*********" required>
-	<br>
 	<br>
 	<label id="b5"><i class="fa fa-lock"></i>CONFIRM PASSWORD:<sup>*</sup></label><br><input type="password" name="password" id="pwd_2" placeholder="**********" required>
 	<br>
-	<br>
 	<i class="fa fa-eye" style="font-size:20px"></i><input type="button" onclick="showpassword();" id="showpwd" value="Show password" >
 	<br>
-	<br>
-	<br><br>
 	<button onclick="validate()" name="submit" id="submitbtn">Sign Up</button>
+	 <div id="success">SignUp Successfully <i class="glyphicon glyphicon-thumbs-up"></i></div>
 </form>
-
-</center>
+</div>
 
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 <script type="text/javascript" src="firebase.js"></script>
