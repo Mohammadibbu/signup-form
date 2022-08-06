@@ -188,12 +188,13 @@ sup{
 	<br>
 	<label id="b3"><i class="fa fa-mobile-phone"></i> Mobile NO:<sup>*</sup>       </label><br><input type="text" name="ph_no" id="phno" placeholder="xxxxxxxxxx"  maxlength="10" minlength="10" required>
 	<br>
-	<label id="b4"><i class="fa fa-lock"></i> PASSWORD:<sup>*</sup>        </label><br><input type="password" name="password" id="pwd" placeholder="*********" required>
+	<label id="b4" for="pwd"><i class="fa fa-lock"></i> PASSWORD:<sup>*</sup>        </label><br><input type="password" name="password" id="pwd" placeholder="*********" required>
 	<br>
-	<label id="b5"><i class="fa fa-lock"></i>CONFIRM PASSWORD:<sup>*</sup></label><br><input type="password" name="password" id="pwd_2" placeholder="**********" required>
-	<br>
+      
 	<i class="fa fa-eye" style="font-size:20px"></i><input type="button" onclick="showpassword();" id="showpwd" value="Show password" >
 	<br>
+	 <label for="message">Send Messages!</label><br><textarea id="message" placeholder="Type Here..." cols="28" rows="4"></textarea>
+	 <br>
 	<button onclick="validate()" name="submit" id="submitbtn">Sign Up</button>
 	 <div id="success">SignUp Successfully <i class="glyphicon glyphicon-thumbs-up"></i></div>
 </form>
